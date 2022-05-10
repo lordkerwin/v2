@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --background: #fff;
+    --foreground: #000;
+    --accent-1: #fafafa;
+    --accent-2: #eaeaea;
+    --accent-3: #999;
+    --accent-4: #888;
+    --accent-5: #666;
+    --accent-6: #444;
+    --accent-7: #333;
+    --accent-8: #111;
+    --secondary: #7928ca;
+    --secondary-light: #8a63d2;
+    --secondary-dark: #4c2889;
+}
+
+.dark {
+    --background: #000;
+    --foreground: #fff;
+    --accent-1: #111;
+    --accent-2: #333;
+    --accent-3: #444;
+    --accent-4: #666;
+    --accent-5: #888;
+    --accent-6: #999;
+    --accent-7: #eaeaea;
+    --accent-8: #fafafa;
+    --secondary: #7928ca;
+    --secondary-light: #8a63d2;
+    --secondary-dark: #4c2889;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-background;
+    @apply text-foreground;
+}
+
+* {
+    @apply transition-all;
+}
+
+.container {
+    @apply max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8;
+}

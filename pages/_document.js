@@ -7,7 +7,7 @@ export default function Document() {
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=optional" />
             </Head>
-            <body className="scroll-smooth">
+            <body className="">
                 <Main />
                 <NextScript />
             </body>
