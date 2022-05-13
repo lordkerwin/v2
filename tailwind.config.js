@@ -20,8 +20,7 @@ module.exports = {
                 'secondary-dark': 'var(--secondary-dark)',
             },
             fontFamily: {
-                sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
-                mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono],
+                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
         },
     },

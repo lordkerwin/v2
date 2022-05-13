@@ -1,10 +1,11 @@
 import Container from '@/components/Container'
-import Link from 'next/link'
 
-export default function Home() {
+const Post = () => {
     return (
         <Container>
-            <h1>Home</h1>
+            <h1>Post</h1>
         </Container>
     )
 }
+
+export default Post
