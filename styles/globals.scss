@@ -71,7 +71,7 @@ body {
 
 .mobile-menu {
     @apply flex flex-col absolute top-0 left-0 w-full h-screen z-[1000] opacity-0 pt-16 px-4;
-    background: var(--accent-1);
+    background: var(--background);
     li {
         transform: translateX(20px);
         opacity: 0;

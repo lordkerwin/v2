@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import useDelayedRender from 'use-delayed-render'
 import cn from 'classnames'
 import Link from 'next/link'
-import { MenuAlt1Icon, MenuAlt4Icon, XIcon } from '@heroicons/react/solid'
+import { MenuAlt4Icon, XIcon } from '@heroicons/react/solid'
 
 const MobileNav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
