@@ -29,6 +29,8 @@ export const Project = defineDocumentType(() => ({
     fields: {
         title: { type: 'string', required: true },
         publishedAt: { type: 'string', required: true },
+        tags: { type: 'string', required: true },
+        image: { type: 'string', required: true },
     },
     computedFields,
 }))

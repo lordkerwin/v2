@@ -15,6 +15,7 @@ module.exports = {
                 'accent-6': 'var(--accent-6)',
                 'accent-7': 'var(--accent-7)',
                 'accent-8': 'var(--accent-8)',
+                'accent-9': 'var(--accent-9)',
                 secondary: 'var(--secondary)',
                 'secondary-light': 'var(--secondary-light)',
                 'secondary-dark': 'var(--secondary-dark)',
