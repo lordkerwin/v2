@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    @apply bg-gray-950;
+    @apply bg-gray-900;
     @apply text-gray-400;
 }
 
@@ -57,6 +57,6 @@ body {
         height: var(--nav-scroll-height);
         transform: translateY(0px);
         @apply shadow-black/30;
-        @apply bg-gray-950/90;
+        @apply bg-gray-900/90;
     }
 }

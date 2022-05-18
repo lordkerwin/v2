@@ -3,11 +3,9 @@ import AboutMe from '@/components/AboutMe'
 import Welcome from '@/components/Welcome'
 import { allPosts, allProjects } from 'contentlayer/generated'
 import { pick } from 'lib/utils'
-import Link from 'next/link'
 import Projects from '@/components/Projects'
 import Posts from '@/components/Posts'
 import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
 
 export function getStaticProps() {
     const posts = allPosts
@@ -28,7 +26,6 @@ export default function Home({ posts, projects }) {
                 <Projects projects={projects} />
                 <Posts posts={posts} />
                 <Contact />
-                <Footer />
             </div>
         </Container>
     )

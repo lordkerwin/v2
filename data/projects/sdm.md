@@ -1,7 +1,7 @@
 ---
-title: 'Test Project'
-tags: ['nuxtjs', 'tailwindcss', 'tailwindcss-module']
-publishedAt: 'December 19, 2020'
+title: 'Slowly Downward Manufactory'
+tags: ['OpenCart', 'TailwindCSS', 'Laravel']
+publishedAt: 'March 21, 2017'
 image: '/static/articles/nuxtjs-and-tailwind/hero.webp'
 ---
 

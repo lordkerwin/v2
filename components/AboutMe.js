@@ -1,6 +1,8 @@
+import React, { useEffect, useRef } from 'react'
+
 const AboutMe = () => {
     return (
-        <div id="about" className="fp-section">
+        <div id="about" className="fp-section animate__animated animate__fadeInUp">
             <h1>About Me</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident sed ipsa commodi distinctio

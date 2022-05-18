@@ -1,6 +1,6 @@
 ---
-title: 'Test Project'
-tags: ['nuxtjs', 'tailwindcss', 'tailwindcss-module']
+title: 'T-Shirt & Sons'
+tags: ['Angular', 'TailwindCSS', 'Firebase', 'Laravel']
 publishedAt: 'December 19, 2020'
 image: '/static/articles/nuxtjs-and-tailwind/hero.webp'
 ---

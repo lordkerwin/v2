@@ -1,7 +1,7 @@
 ---
-title: 'Test Project'
-tags: ['nuxtjs', 'tailwindcss', 'tailwindcss-module']
-publishedAt: 'December 19, 2020'
+title: 'Butti'
+tags: ['OpenCart', 'TailwindCSS']
+publishedAt: 'May 13, 2018'
 image: '/static/articles/nuxtjs-and-tailwind/hero.webp'
 ---
 

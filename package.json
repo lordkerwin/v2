@@ -11,7 +11,6 @@
     "dependencies": {
         "@headlessui/react": "^1.6.1",
         "@heroicons/react": "^1.0.6",
-        "animate.css": "^4.1.1",
         "classnames": "^2.3.1",
         "contentlayer": "^0.2.5",
         "next": "12.1.6",

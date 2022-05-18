@@ -1,7 +1,7 @@
 ---
-title: 'Test Project'
-tags: ['nuxtjs', 'tailwindcss', 'tailwindcss-module']
-publishedAt: 'December 19, 2020'
+title: 'Personal Website'
+tags: ['Next.js', 'TailwindCSS', 'Vercel', 'Contentlayer']
+publishedAt: 'April 19, 2022'
 image: '/static/articles/nuxtjs-and-tailwind/hero.webp'
 ---
 
