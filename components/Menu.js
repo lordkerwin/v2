@@ -3,6 +3,7 @@ import cn from 'classnames'
 import { navLinks } from 'config'
 import useScrollDirection from 'hooks'
 import Link from 'next/link'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 const Menu = () => {
     const [isMounted, setIsMounted] = useState(false)
@@ -36,19 +37,36 @@ const Menu = () => {
         >
             <div className="container">
                 <div className="flex items-center justify-between">
-                    <Link href="/">
-                        <a className={cn('hidden md:inline-block')}>
-                            <span>Logo</span>
-                        </a>
-                    </Link>
-                    <nav className="flex gap-x-8">
-                        {navLinks.map((link) => (
-                            <Link href={link.href} key={link.href}>
-                                <a className={cn('hidden md:inline-block')}>
-                                    <span>{link.name}</span>
-                                </a>
-                            </Link>
-                        ))}
+                    <TransitionGroup component={null}>
+                        {isMounted && (
+                            <CSSTransition classNames={'fadedown'} timeout={0}>
+                                <Link href="/">
+                                    <a className={cn('hidden md:inline-block')}>
+                                        <span>Logo</span>
+                                    </a>
+                                </Link>
+                            </CSSTransition>
+                        )}
+                    </TransitionGroup>
+
+                    <nav className="flex">
+                        <ol className="flex gap-x-4">
+                            <TransitionGroup component={null}>
+                                {isMounted &&
+                                    navLinks &&
+                                    navLinks.map((link, i) => (
+                                        <CSSTransition key={link.href} classNames={'fadedown'} timeout={0}>
+                                            <li style={{ transitionDelay: `${(i + 1) * 75}ms` }}>
+                                                <Link href={link.href} key={link.href}>
+                                                    <a className={cn('block p-2 rounded-lg hover:text-violet-500')}>
+                                                        <span>{link.name}</span>
+                                                    </a>
+                                                </Link>
+                                            </li>
+                                        </CSSTransition>
+                                    ))}
+                            </TransitionGroup>
+                        </ol>
                     </nav>
                 </div>
             </div>
