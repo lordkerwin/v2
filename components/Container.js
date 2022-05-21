@@ -1,4 +1,4 @@
-import Menu from '@/components/Menu'
+import Nav from '@/components/Nav'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -23,7 +23,7 @@ const Container = (props) => {
                 <meta property="og:url" content={`https://seankerwin.dev${router.asPath}`} />
                 <link rel="canonical" href={`https://seankerwin.dev${router.asPath}`} />
             </Head>
-            <Menu />
+            <Nav />
             <div className="container">
                 <main className="flex flex-col">{children}</main>
             </div>

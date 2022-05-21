@@ -33,30 +33,47 @@ body {
 .fadedown-enter {
     @apply opacity-5;
     @apply -translate-y-5;
-    @apply transition-all duration-300 ease-in;
+    @apply transition-all duration-300 ease-linear;
 }
 .fadedown-enter-active {
     @apply opacity-100;
     @apply translate-y-0;
-    @apply transition-all duration-300 ease-in;
+    @apply transition-all duration-300 ease-linear;
 }
 
-.menu {
-    @apply fixed top-0 left-0 w-full z-[1000] bg-transparent;
-    @apply flex items-center leading-none;
+.header {
+    @apply fixed top-0 left-0 w-full z-[100] bg-gray-900/80;
+    @apply filter-none;
+    @apply backdrop-blur-md;
     @apply shadow-lg shadow-transparent;
-    @apply transition-all ease-in duration-150;
-    backdrop-filter: blur(10px);
+    @apply flex items-center justify-center;
     height: var(--nav-height);
     &.scrolling-down {
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
-        @apply shadow-black/30;
+        @apply shadow-black/20;
     }
     &.scrolling-up {
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        @apply shadow-black/30;
+        @apply shadow-black/20;
         @apply bg-gray-900/90;
+    }
+    nav {
+        @apply relative w-full flex items-center justify-between;
+        .logo {
+        }
+        .links {
+            @apply hidden md:flex items-center;
+            ol {
+                @apply list-none p-0 m-0 flex space-x-3;
+                li {
+                    @apply relative;
+                    a {
+                        @apply p-3;
+                    }
+                }
+            }
+        }
     }
 }
