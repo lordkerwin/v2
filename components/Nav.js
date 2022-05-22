@@ -3,8 +3,8 @@ import cn from 'classnames'
 import { navLinks } from 'config'
 import useScrollDirection from 'hooks/useScrollDirection'
 import Link from 'next/link'
-import { TransitionGroup } from 'react-transition-group'
-import { CSSTransition } from 'react-transition-group'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import Menu from '@/components/Menu'
 
 const Nav = () => {
     const [mounted, setMounted] = useState(false)
@@ -38,9 +38,9 @@ const Nav = () => {
             <nav className="container">
                 <TransitionGroup component={null}>
                     {mounted && (
-                        <CSSTransition classNames={'fadedown'} timeout={75}>
+                        <CSSTransition classNames={'fadedown'} timeout={1000}>
                             <Link href="/">
-                                <a className="logo">logo</a>
+                                <a className="font-medium text-white text-xl">Sean Kerwin</a>
                             </Link>
                         </CSSTransition>
                     )}
@@ -51,7 +51,7 @@ const Nav = () => {
                         <TransitionGroup component={null}>
                             {mounted &&
                                 navLinks.map(({ href, name }, i) => (
-                                    <CSSTransition key={name} classNames={'fadedown'} timeout={75}>
+                                    <CSSTransition key={name} classNames={'fadedown'} timeout={1000}>
                                         <li
                                             className={cn({ active: scrolledTop })}
                                             style={{ transitionDelay: `${i * 100}ms` }}
@@ -65,6 +65,14 @@ const Nav = () => {
                         </TransitionGroup>
                     </ol>
                 </div>
+
+                <TransitionGroup component={null}>
+                    {mounted && (
+                        <CSSTransition classNames={'fadedown'} timeout={1000}>
+                            <Menu />
+                        </CSSTransition>
+                    )}
+                </TransitionGroup>
             </nav>
         </header>
     )

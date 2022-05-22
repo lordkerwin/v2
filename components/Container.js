@@ -1,11 +1,45 @@
+import React, { useState, useEffect } from 'react'
 import Nav from '@/components/Nav'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 const Container = (props) => {
-    const { children, ...customMeta } = props
-
     const router = useRouter()
+    const isHome = router.asPath === '/'
+    console.log(isHome)
+    const [loading, setLoading] = useState(isHome)
+
+    const { children, ...customMeta } = props
+    const handleExternalLinks = () => {
+        const allLinks = Array.from(document.querySelectorAll('a'))
+        if (allLinks.length > 0) {
+            allLinks.forEach((link) => {
+                if (link.host !== window.location.host) {
+                    link.setAttribute('rel', 'noopener noreferrer')
+                    link.setAttribute('target', '_blank')
+                }
+            })
+        }
+    }
+
+    useEffect(() => {
+        if (loading) {
+            return
+        }
+
+        if (router.asPath.includes('#')) {
+            const id = location.hash.substring(1) // location.hash without the '#'
+            setTimeout(() => {
+                const el = document.getElementById(id)
+                if (el) {
+                    el.scrollIntoView()
+                    el.focus()
+                }
+            }, 0)
+        }
+
+        handleExternalLinks()
+    }, [loading, router.asPath])
 
     const meta = {
         title: 'Sean Kerwin - Front End Developer',
@@ -23,9 +57,13 @@ const Container = (props) => {
                 <meta property="og:url" content={`https://seankerwin.dev${router.asPath}`} />
                 <link rel="canonical" href={`https://seankerwin.dev${router.asPath}`} />
             </Head>
-            <Nav />
-            <div className="container">
-                <main className="flex flex-col">{children}</main>
+            <div className="flex flex-co min-h-screen">
+                <Nav />
+                <div className="container">
+                    <main className="flex flex-col" id="content">
+                        {children}
+                    </main>
+                </div>
             </div>
         </div>
     )
