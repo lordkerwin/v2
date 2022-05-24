@@ -100,34 +100,15 @@ body {
             @apply flex items-center justify-center;
             @apply z-[400];
             svg {
-                @apply w-9 h-9 cursor-pointer;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                stroke-miterlimit: 1.5;
-                & #top,
-                & #bottom {
-                    stroke-dasharray: 30, 75.39;
-                    transition: var(--transition);
-                }
-                & path {
-                    @apply fill-transparent stroke-white stroke-2;
-                }
-                &.active #top,
-                &.active #bottom {
-                    stroke-dasharray: 75.39;
-                    stroke-dashoffset: -60;
-                }
-                &:nth-child(2) {
-                    transform: rotate(0deg);
-                    transition: var(--transition);
-                    & path {
-                        transition: var(--transition);
-                    }
-                    &.active {
-                        transform: rotate(180deg);
-                    }
+                @apply absolute;
+                transform: translate(-50%, -50%) scale(1);
+                top: 50%;
+                left: 50%;
+                opacity: 1;
+                transition: var(--transition);
+                &.hide {
+                    transform: translate(-50%, -50%) scale(0);
+                    opacity: 0;
                 }
             }
         }
