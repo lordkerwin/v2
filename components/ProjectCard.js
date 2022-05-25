@@ -7,7 +7,7 @@ const ProjectCard = ({ project, hero = false }) => {
                 <div className="content-inner">
                     <div>
                         <span className="min-h-[20px] text-sm block mb-1 text-purple-400 font-medium">
-                            {hero ? 'Latest project' : ''}
+                            {hero ? 'Latest project' : project.publishedAt}
                         </span>
                         <h3>{project.title}</h3>
                     </div>
@@ -20,7 +20,7 @@ const ProjectCard = ({ project, hero = false }) => {
                 </div>
             </div>
             <div className="image">
-                <Image src={project.image} alt={project.title} width={1974} height={1481} />
+                <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
             </div>
         </div>
     )

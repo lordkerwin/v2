@@ -11,18 +11,6 @@ const computedFields = {
     },
 }
 
-export const Post = defineDocumentType(() => ({
-    name: 'Post',
-    filePathPattern: `posts/*.md`,
-    fields: {
-        title: { type: 'string', required: true },
-        publishedAt: { type: 'string', required: true },
-        summary: { type: 'string', required: true },
-        image: { type: 'string', required: true },
-    },
-    computedFields,
-}))
-
 export const Project = defineDocumentType(() => ({
     name: 'Project',
     filePathPattern: `projects/*.md`,
@@ -37,5 +25,5 @@ export const Project = defineDocumentType(() => ({
 
 export default makeSource({
     contentDirPath: 'data',
-    documentTypes: [Post, Project],
+    documentTypes: [Project],
 })

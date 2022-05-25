@@ -9,8 +9,8 @@ module.exports = {
             href: '/#projects',
         },
         {
-            name: 'Posts',
-            href: '/#posts',
+            name: 'Articles',
+            href: '/#articles',
         },
         {
             name: 'Contact',

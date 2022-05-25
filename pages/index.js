@@ -1,30 +1,28 @@
 import Container from '@/components/Container'
 import AboutMe from '@/components/AboutMe'
 import Welcome from '@/components/Welcome'
-import { allPosts, allProjects } from 'contentlayer/generated'
-import { pick } from 'lib/utils'
+import { allProjects } from 'contentlayer/generated'
 import Projects from '@/components/Projects'
-import Posts from '@/components/Posts'
 import Contact from '@/components/Contact'
+import Articles from '@/components/Articles'
 
-export function getStaticProps() {
-    const posts = allPosts
-        .map((post) => pick(post, ['title', 'publishedAt', 'slug', 'summary', 'image']))
-        .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
+export async function getStaticProps() {
+    const response = await fetch('https://dev.to/api/articles/latest?username=seankerwin&per_page=5')
+    const articles = await response?.json()
 
     const projects = allProjects.sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
 
-    return { props: { posts, projects } }
+    return { props: { projects, articles } }
 }
 
-export default function Home({ posts, projects }) {
+export default function Home({ articles, projects }) {
     return (
         <Container>
             <div className="flex flex-col gap-y-10">
                 <Welcome />
                 <AboutMe />
                 <Projects projects={projects} />
-                <Posts posts={posts} />
+                <Articles articles={articles} />
                 <Contact />
             </div>
         </Container>
