@@ -1,13 +1,21 @@
+import ProjectCard from '@/components/ProjectCard'
+
 const Projects = ({ projects }) => {
     console.log('projects', projects)
+
+    const latestProject = projects[0]
+    const otherProjects = projects.slice(1, 4)
+
     return (
         <div id="projects" className="fp-section">
-            <h1>Projects</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, perferendis quo beatae inventore quibusdam
-                architecto ducimus maiores eligendi sunt cumque, vel aliquam explicabo alias obcaecati molestiae. Id
-                alias quae tempora!
-            </p>
+            <h2 className="text-2xl font-bold text-white">Projects</h2>
+
+            <div className="flex flex-col gap-16 mt-20">
+                <ProjectCard project={latestProject} hero />
+                {otherProjects.map((project) => (
+                    <ProjectCard key={project._id} project={project} />
+                ))}
+            </div>
         </div>
     )
 }

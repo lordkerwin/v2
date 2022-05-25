@@ -2,7 +2,7 @@
 title: 'Nuxt.js + Tailwind 2.0'
 publishedAt: 'December 19, 2020'
 summary: 'Add Tailwind to your Nuxt.js project'
-image: '/static/articles/nuxtjs-and-tailwind/hero.webp'
+image: '/static/test.webp'
 ---
 
 In the post, i'm going to explain how to use the new Tailwind 2.0 with Nuxt.js.
