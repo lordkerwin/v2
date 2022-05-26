@@ -6,21 +6,9 @@ import { useRouter } from 'next/router'
 const Container = (props) => {
     const router = useRouter()
     const isHome = router.asPath === '/'
-    console.log(isHome)
     const [loading, setLoading] = useState(isHome)
 
     const { children, ...customMeta } = props
-    const handleExternalLinks = () => {
-        const allLinks = Array.from(document.querySelectorAll('a'))
-        if (allLinks.length > 0) {
-            allLinks.forEach((link) => {
-                if (link.host !== window.location.host) {
-                    link.setAttribute('rel', 'noopener noreferrer')
-                    link.setAttribute('target', '_blank')
-                }
-            })
-        }
-    }
 
     useEffect(() => {
         if (loading) {
@@ -37,8 +25,6 @@ const Container = (props) => {
                 }
             }, 0)
         }
-
-        handleExternalLinks()
     }, [loading, router.asPath])
 
     const meta = {

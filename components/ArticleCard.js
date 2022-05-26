@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const ArticleCard = ({ article }) => {
     return (
-        <a href={article.canonical_url} className="article group">
+        <a href={article.canonical_url} className="article group" target={'_blank'} rel={'noreferrer'}>
             <article>
                 <div className="content">
                     <div className="content-inner">
