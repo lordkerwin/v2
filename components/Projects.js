@@ -6,9 +6,9 @@ const Projects = ({ projects }) => {
 
     return (
         <div id="projects" className="fp-section">
-            <h2 className="text-2xl font-bold text-white">Projects</h2>
+            <h2 className="text-3xl font-bold text-white pt-10">Projects</h2>
 
-            <div className="flex flex-col gap-12 sm:gap-20 mt-20">
+            <div className="flex flex-col gap-12 sm:gap-20 mt-12">
                 <ProjectCard project={latestProject} hero />
                 {otherProjects.map((project) => (
                     <ProjectCard key={project._id} project={project} />

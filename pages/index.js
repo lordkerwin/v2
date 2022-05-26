@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function Home({ articles, projects }) {
     return (
         <Container>
-            <div className="flex flex-col gap-y-10">
+            <div className="flex flex-col gap-y-20">
                 <Welcome />
                 <AboutMe />
                 <Projects projects={projects} />

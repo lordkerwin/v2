@@ -195,3 +195,72 @@ body {
         }
     }
 }
+
+a.article {
+    article {
+        @apply grid grid-cols-12 relative;
+        .content {
+            @apply relative;
+            z-index: 30;
+            @apply col-start-1 sm:col-start-6 col-end-[-1];
+            @apply row-start-1 row-end-[-1];
+            .content-inner {
+                @apply bg-gray-900/90 sm:bg-transparent;
+                @apply py-8 flex flex-col gap-4 sm:items-end;
+                @apply text-center sm:text-right;
+                h3 {
+                    @apply text-xl font-bold text-gray-50 tracking-wide;
+                }
+                p {
+                    @apply sm:bg-gray-800 sm:rounded-lg sm:shadow-gray-950 sm:shadow-lg px-4 py-2 sm:p-6 text-gray-100;
+                }
+            }
+        }
+        .image {
+            @apply relative;
+            @apply col-start-1 col-end-[-1] sm:col-end-7;
+            @apply row-start-1 row-end-[-1];
+            @apply shadow-xl;
+
+            &::before {
+                content: '';
+                @apply absolute;
+                @apply bg-gray-900;
+                @apply h-1/4 w-1/2;
+                @apply -bottom-2;
+                @apply z-[5];
+                @apply -left-2;
+                @apply rounded-bl-2xl;
+                @apply border-b-2 border-l-2 border-gray-900;
+                transition: var(--transition);
+            }
+            &::after {
+                content: '';
+                @apply absolute;
+                @apply bg-gray-900;
+                @apply h-1/4 w-1/2;
+                @apply -top-2;
+                @apply z-[5];
+                @apply -right-2;
+                @apply rounded-tr-2xl;
+                @apply border-t-2 border-r-2 border-gray-900;
+                transition: var(--transition);
+            }
+
+            img {
+                @apply rounded-lg shadow-lg grayscale;
+                @apply group-hover:grayscale-0;
+            }
+        }
+    }
+    &:hover {
+        .image {
+            &::before {
+                @apply border-purple-400;
+            }
+            &::after {
+                @apply border-purple-400;
+            }
+        }
+    }
+}
