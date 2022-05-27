@@ -9,7 +9,7 @@ const ArticleCard = ({ article }) => {
                 <div className="content">
                     <div className="content-inner">
                         <div>
-                            <span className="min-h-[20px] text-sm block mb-1 text-purple-400 font-medium">
+                            <span className="min-h-[20px] text-sm block mb-1 text-purple-400 font-bold font-mono">
                                 {formatDate(article.published_timestamp)}
                             </span>
                             <h3>{article.title}</h3>

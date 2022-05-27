@@ -52,10 +52,7 @@ const Nav = () => {
                             {mounted &&
                                 navLinks.map(({ href, name }, i) => (
                                     <CSSTransition key={name} classNames={'fadedown'} timeout={1000}>
-                                        <li
-                                            className={cn({ active: scrolledTop })}
-                                            style={{ transitionDelay: `${i * 100}ms` }}
-                                        >
+                                        <li style={{ transitionDelay: `${i * 100}ms` }}>
                                             <Link href={href}>
                                                 <a>{name}</a>
                                             </Link>

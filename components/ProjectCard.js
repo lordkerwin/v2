@@ -6,7 +6,7 @@ const ProjectCard = ({ project, hero = false }) => {
             <div className="content">
                 <div className="content-inner">
                     <div>
-                        <span className="min-h-[20px] text-sm block mb-1 text-purple-400 font-medium">
+                        <span className="min-h-[20px] text-sm block mb-1 text-purple-400 font-bold font-mono">
                             {hero ? 'Latest project' : project.publishedAt}
                         </span>
                         <h3>{project.title}</h3>

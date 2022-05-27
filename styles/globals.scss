@@ -33,7 +33,7 @@ body {
     @apply w-full;
     @apply min-h-screen;
     @apply flex flex-col items-center justify-center;
-    @apply mb-20;
+    @apply pt-14;
 }
 
 * {
@@ -81,11 +81,14 @@ body {
         .links {
             @apply hidden md:flex items-center;
             ol {
-                @apply list-none p-0 m-0 flex space-x-3;
+                @apply list-none p-0 m-0 flex space-x-8;
                 li {
                     @apply relative;
                     a {
-                        @apply p-3;
+                        @apply font-mono;
+                        &:hover {
+                            @apply text-purple-400;
+                        }
                     }
                 }
             }
@@ -168,7 +171,7 @@ body {
                 @apply sm:bg-gray-800 sm:rounded-lg sm:shadow-gray-950 sm:shadow-lg p-6 text-gray-100;
             }
             ul.tags {
-                @apply list-none flex justify-start space-x-4 text-xs font-medium;
+                @apply list-none flex justify-start space-x-4 text-xs font-bold font-mono;
             }
         }
     }
@@ -222,32 +225,6 @@ a.article {
             @apply col-start-1 col-end-[-1] sm:col-end-7;
             @apply row-start-1 row-end-[-1];
             @apply shadow-xl;
-
-            // &::before {
-            //     content: '';
-            //     @apply absolute;
-            //     @apply bg-gray-900;
-            //     @apply h-1/4 w-1/2;
-            //     @apply -bottom-2;
-            //     @apply z-[5];
-            //     @apply -left-2;
-            //     @apply rounded-bl-2xl;
-            //     @apply border-b-2 border-l-2 border-gray-900;
-            //     transition: var(--transition);
-            // }
-            // &::after {
-            //     content: '';
-            //     @apply absolute;
-            //     @apply bg-gray-900;
-            //     @apply h-1/4 w-1/2;
-            //     @apply -top-2;
-            //     @apply z-[5];
-            //     @apply -right-2;
-            //     @apply rounded-tr-2xl;
-            //     @apply border-t-2 border-r-2 border-gray-900;
-            //     transition: var(--transition);
-            // }
-
             img {
                 @apply rounded-lg shadow-lg grayscale;
                 @apply group-hover:grayscale-0;
@@ -266,6 +243,24 @@ a.article {
     }
 }
 
+.accent {
+    @apply text-white font-bold underline decoration-purple-400 decoration-2 underline-offset-2;
+}
+
+.section-title {
+    @apply text-gray-50;
+    @apply font-extrabold text-3xl font-mono;
+    @apply text-left w-full relative mb-12;
+    &::after {
+        content: '';
+        @apply absolute;
+        @apply h-px bg-gradient-to-r from-purple-500 via-rose-400;
+        @apply w-1/2;
+        @apply top-1/2;
+        @apply ml-4 mt-px;
+    }
+}
+
 .about-me {
     @apply flex flex-col items-center sm:items-start sm:flex-row gap-6 sm:gap-16;
     .text {
@@ -274,23 +269,27 @@ a.article {
         @apply leading-relaxed;
         @apply sm:w-3/4;
         @apply flex flex-col gap-4;
+        @apply font-medium;
         .skills {
             @apply grid grid-cols-2;
             li {
-                @apply relative;
-                @apply pl-5;
-                &::before {
-                    content: '▸';
-                    @apply absolute;
-                    @apply left-0;
-                    @apply -mt-px;
-                    @apply text-purple-400;
+                span {
+                    @apply relative;
+                    @apply pl-5;
+                    &::before {
+                        content: '▸';
+                        @apply absolute;
+                        @apply left-0;
+                        @apply -mt-px;
+                        @apply text-purple-400;
+                        @apply hidden md:inline-block;
+                    }
                 }
             }
         }
     }
     .image {
-        @apply sm:mt-2;
+        @apply sm:mt-3;
         @apply order-1 sm:order-2;
         @apply flex items-center justify-center sm:flex-initial w-48 sm:w-auto;
         span {
