@@ -5,10 +5,9 @@ import image from '../public/static/me.webp'
 const AboutMe = () => {
     return (
         <div id="about" className="fp-section">
-            {/* <h2 className="section-title">About me</h2> */}
-            <p className="text-4xl font-extrabold text-white w-full mb-6">Hey 👋</p>
-            <div className="about-me">
+            <div className="about-me pt-16 sm:pt-0">
                 <div className="text">
+                    <p className="text-4xl font-extrabold text-white w-full sm:mb-6">Hey 👋</p>
                     <p className="text-2xl">
                         My name is <span className="accent">Sean Kerwin</span> and I&apos;m a self-taught front-end web
                         developer and designer based in <span className="accent">Wiltshire, England</span>.
