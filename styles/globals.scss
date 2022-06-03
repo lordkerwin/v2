@@ -41,7 +41,7 @@ body {
 }
 
 .container {
-    @apply max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8;
+    @apply max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8;
 }
 
 .fadedown-enter {
@@ -306,30 +306,27 @@ a.article {
     }
 }
 
-.service {
-    @apply relative grid grid-cols-12;
-    .image {
-        @apply relative z-[9];
-        @apply col-start-6 col-end-[-1];
-        @apply row-start-1 row-end-[-1];
-        img {
-            @apply rounded-lg shadow-lg grayscale;
-            @apply group-hover:grayscale-0;
-        }
-    }
-    .text {
-        @apply relative z-10 pt-10 pb-6;
-        @apply col-start-1 col-end-7;
-        @apply row-start-2 row-end-[-1];
-        @apply text-left flex flex-col gap-4;
-        h3 {
-            @apply min-h-[20px] text-sm block mb-1 text-purple-400 font-bold font-mono;
-        }
-        h4 {
-            @apply text-xl font-bold text-gray-50 tracking-wide;
+.service-wrapper {
+    @apply grid grid-cols-1 gap-16;
+    .service {
+        @apply flex flex-col gap-4;
+        .heading {
+            @apply flex items-center;
+            @apply gap-x-6;
+            .divider {
+                @apply w-px h-full bg-gradient-to-b from-purple-500 to-rose-400;
+            }
+            .text {
+                .subline {
+                    @apply text-sm block mt-1 text-purple-400 font-bold font-mono;
+                }
+                h3 {
+                    @apply text-xl font-bold text-gray-50 tracking-wide;
+                }
+            }
         }
         p {
-            @apply sm:bg-gray-800 sm:rounded-lg sm:shadow-gray-950 sm:shadow-lg px-4 py-2 sm:p-6 text-gray-100;
+            @apply leading-relaxed;
         }
     }
 }
