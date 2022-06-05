@@ -34,3 +34,5 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+sendgrid.env
+.env.local
