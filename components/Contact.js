@@ -131,7 +131,7 @@ const Contact = () => {
                     </form>
                 </div>
                 <div>
-                    <h3>Let&apos;s work together</h3>
+                    <h3>Let&apos;s work together </h3>
                     <p>
                         I&apos;m always looking for new opportunities to help. If you have a project in mind, or you
                         just want to chat, I&apos;m always open to discussing it.
