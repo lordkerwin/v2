@@ -4,7 +4,7 @@
 
 :root {
     --nav-height: 100px;
-    --nav-scroll-height: 70px;
+    --nav-scroll-height: 50px;
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -67,12 +67,12 @@ body {
     @apply flex items-center justify-center;
     transition: var(--transition);
     height: var(--nav-height);
-    &.scrolling-down {
+    &.hide {
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
         @apply shadow-black/20;
     }
-    &.scrolling-up {
+    &.show {
         height: var(--nav-scroll-height);
         transform: translateY(0px);
         @apply shadow-black/20;

@@ -8,7 +8,10 @@ import Menu from '@/components/Menu'
 
 const Nav = () => {
     const [mounted, setMounted] = useState(false)
-    const scrollDirection = useScrollDirection('down')
+    const scrollDirection = useScrollDirection({
+        initialDirection: 'down',
+        thresholdPixels: 0,
+    })
     const [scrolledTop, setScrolledTop] = useState(true)
 
     const handleScroll = () => {
@@ -31,8 +34,8 @@ const Nav = () => {
     return (
         <header
             className={cn('header', {
-                'scrolling-down': !scrolledTop && scrollDirection === 'down',
-                'scrolling-up': !scrolledTop && scrollDirection === 'up',
+                hide: !scrolledTop && scrollDirection === 'down',
+                show: !scrolledTop && scrollDirection === 'up',
             })}
         >
             <nav className="container">

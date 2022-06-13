@@ -43,13 +43,14 @@ const Container = (props) => {
                 <meta property="og:url" content={`https://seankerwin.dev${router.asPath}`} />
                 <link rel="canonical" href={`https://seankerwin.dev${router.asPath}`} />
             </Head>
-            <div className="flex flex-co min-h-screen">
+            <div className="flex flex-col min-h-screen">
                 <Nav />
                 <div className="container">
                     <main className="flex flex-col" id="content">
                         {children}
                     </main>
                 </div>
+                <footer className="container py-10">&copy; 2022 - Sean Kerwin</footer>
             </div>
         </div>
     )
