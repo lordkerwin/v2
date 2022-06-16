@@ -1,5 +1,4 @@
-import '../styles/globals.css'
-import 'animate.css'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />

@@ -30,3 +30,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
+# Contentlayer
+.contentlayer
+sendgrid.env
+.env.local
