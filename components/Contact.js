@@ -132,7 +132,7 @@ const Contact = () => {
                     </form>
                 </div>
                 <div className="sm:mt-6">
-                    <div className="flex flex-col gap-10">
+                    <div className="flex flex-col gap-10 text-center sm:text-left">
                         <div className="flex flex-col gap-6">
                             <h3 className="text-2xl font-bold text-gray-50">Let&apos;s work together </h3>
                             <p>
@@ -142,7 +142,10 @@ const Contact = () => {
                         </div>
                         <div className="flex flex-col gap-6">
                             <h3 className="text-2xl font-bold text-gray-50">Contact Info</h3>
-                            <a href="mailto:hey@seankerwin.dev" className="flex items-center gap-3">
+                            <a
+                                href="mailto:hey@seankerwin.dev"
+                                className="flex items-center gap-3 justify-center sm:justify-start"
+                            >
                                 <MailIcon className="w-5 h-5" />
                                 <span className="text-gray-50">hey@seankerwin.dev</span>
                             </a>
@@ -150,7 +153,7 @@ const Contact = () => {
                                 href="https://twitter.com/snwkrwn"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-3"
+                                className="flex items-center gap-3 justify-center sm:justify-start"
                             >
                                 <svg
                                     role="img"
@@ -166,7 +169,7 @@ const Contact = () => {
                                 href="https://dev.to/seankerwin/"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-3"
+                                className="flex items-center gap-3 justify-center sm:justify-start"
                             >
                                 <svg
                                     role="img"

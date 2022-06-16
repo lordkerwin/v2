@@ -50,7 +50,7 @@ const Container = (props) => {
                         {children}
                     </main>
                 </div>
-                <footer className="container py-10">&copy; 2022 - Sean Kerwin</footer>
+                <footer className="container py-10 text-center sm:text-left">&copy; 2022 - Sean Kerwin</footer>
             </div>
         </div>
     )
