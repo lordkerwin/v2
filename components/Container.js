@@ -42,6 +42,16 @@ const Container = (props) => {
                 <meta name="robots" content="follow, index" />
                 <meta content={meta.description} name="description" />
                 <meta property="og:url" content={`https://seankerwin.dev${router.asPath}`} />
+                <meta property="og:type" content={meta.type} />
+                <meta property="og:site_name" content="Sean Kerwin" />
+                <meta property="og:description" content={meta.description} />
+                <meta property="og:title" content={meta.title} />
+                <meta property="og:image" content={meta.image} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@snwkrwn" />
+                <meta name="twitter:title" content={meta.title} />
+                <meta name="twitter:description" content={meta.description} />
+                <meta name="twitter:image" content={meta.image} />
                 <link rel="canonical" href={`https://seankerwin.dev${router.asPath}`} />
             </Head>
             <div className="flex flex-col min-h-screen">
