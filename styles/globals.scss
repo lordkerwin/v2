@@ -158,7 +158,7 @@ body {
 .project {
     @apply grid grid-cols-12;
     .content {
-        @apply py-10;
+        @apply sm:py-10;
         @apply col-start-1 col-end-[-1] sm:col-end-9 md:col-end-7;
         @apply row-start-1 row-end-[-1];
         z-index: 10;
