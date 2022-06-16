@@ -1,8 +1,9 @@
 ---
 title: 'Butti'
 tags: ['OpenCart', 'TailwindCSS']
-publishedAt: 'May 13, 2018'
-image: '/static/test.webp'
+publishedAt: '2018'
+image: '/static/butti.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+A simple, clean, and elegant ecommerce website I built with OpenCart and TailwindCSS.
+Butti produce custom eyewear holders with leather, made in the United Kingdom.

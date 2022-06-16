@@ -1,8 +1,9 @@
 ---
 title: 'T-Shirt & Sons'
 tags: ['Angular', 'TailwindCSS', 'Firebase', 'Laravel']
-publishedAt: 'December 19, 2020'
-image: '/static/test.webp'
+publishedAt: '2020'
+image: '/static/tsas.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+I built this website during my time at T-Shirt & Sons, I used Angular as the front-end, with Laravel powering the back-end. It uses
+Firebase and Node.js to process artwork and track baskets.

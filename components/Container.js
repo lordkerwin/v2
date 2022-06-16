@@ -30,6 +30,7 @@ const Container = (props) => {
     const meta = {
         title: 'Sean Kerwin - Front End Developer',
         description: 'Front End Developer based in Wiltshire, UK',
+        image: 'https://seankerwin.dev/static/banner.jpg',
         type: 'website',
         ...customMeta,
     }

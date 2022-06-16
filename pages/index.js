@@ -1,6 +1,5 @@
 import Container from '@/components/Container'
 import AboutMe from '@/components/AboutMe'
-import Welcome from '@/components/Welcome'
 import { allProjects } from 'contentlayer/generated'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
@@ -20,7 +19,6 @@ export default function Home({ articles, projects }) {
     return (
         <Container>
             <div className="flex flex-col gap-y-20">
-                {/* <Welcome /> */}
                 <AboutMe />
                 <Services />
                 <Projects projects={projects} />
